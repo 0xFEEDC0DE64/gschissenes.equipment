@@ -15,21 +15,24 @@ $selected = $files[random_int(0, count($files)-1)];
         <title>Hello, world!</title>
 
         <style>
-            html, body, #mainContainer, #mainCarousel, .carousel-inner, .carousel-item {
-                height: 100%;
-            }
-
-            .carousel-item img {
-                max-width: 100%;
-                max-height: 100%;
-            }
-
             body {
                 background-color: #222;
             }
 
-            .carousel-inner {
+            html, body, #mainContainer, #mainCarousel, #mainCarousel .carousel-inner, #mainCarousel .carousel-item {
+                height: 100%;
+            }
+
+            #mainCarousel .carousel-item {
                 text-align: center;
+            }
+
+            #mainCarousel .carousel-item img {
+                position: relative;
+                max-width: 100%;
+                max-height: 100%;
+                top: 50%;
+                transform: translateY(-50%);
             }
         </style>
     </head>
